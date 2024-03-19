@@ -7,7 +7,9 @@ import { ThemeToggle } from "@/components/ThemeToggle"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <NextThemesProvider attribute="class" defaultTheme="system" enableSystem>
-      <Component {...pageProps} />
+      <div className="min-h-screen">
+        <Component {...pageProps} />
+      </div>
       <ThemeToggle className="absolute top-6 right-6" />
     </NextThemesProvider>
   )
